@@ -1,8 +1,8 @@
-import os
 import logging
+import os
 import sys
-from unittest import TestCase
 from tempfile import mkdtemp
+from unittest import TestCase
 
 # Do not (re)move the reactor import, even if we aren't using it
 # (nose starts the reactor in a separate thread when importing this)\
@@ -14,7 +14,7 @@ else:
 
 from twisted.internet.defer import inlineCallbacks, returnValue
 
-from ..discovery.community import PEERCACHE_FILENAME
+from dispersy.discovery import PEERCACHE_FILENAME
 from ..dispersy import Dispersy
 from ..endpoint import ManualEnpoint
 from ..util import blockingCallFromThread

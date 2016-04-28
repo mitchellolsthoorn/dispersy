@@ -23,24 +23,24 @@ from twisted.python.threadable import isInIOThread
 from .authentication import NoAuthentication, MemberAuthentication, DoubleMemberAuthentication
 from .bloomfilter import BloomFilter
 from .candidate import Candidate, WalkCandidate
-from .conversion import BinaryConversion, DefaultConversion, Conversion
-from .destination import CommunityDestination, CandidateDestination
-from .distribution import (SyncDistribution, GlobalTimePruning, LastSyncDistribution, DirectDistribution,
-                           FullSyncDistribution)
-from .exception import ConversionNotFoundException, MetaNotFoundException
-from .member import DummyMember, Member
-from .message import (BatchConfiguration, Message, Packet, DropMessage, DelayMessageByProof,
-                      DelayMessageByMissingMessage, DropPacket, DelayPacket, DelayMessage)
-from .payload import (AuthorizePayload, RevokePayload, UndoPayload, DestroyCommunityPayload, DynamicSettingsPayload,
-                      IdentityPayload, MissingIdentityPayload, IntroductionRequestPayload, IntroductionResponsePayload,
-                      PunctureRequestPayload, PuncturePayload, MissingMessagePayload, MissingSequencePayload,
-                      MissingProofPayload, SignatureRequestPayload, SignatureResponsePayload)
-from .requestcache import RequestCache, SignatureRequestCache, IntroductionRequestCache
-from .resolution import PublicResolution, LinearResolution, DynamicResolution
-from .statistics import CommunityStatistics
-from .taskmanager import TaskManager
-from .timeline import Timeline
-from .util import runtime_duration_warning, attach_runtime_statistics, deprecated, is_valid_address
+from conversion import BinaryConversion, DefaultConversion, Conversion
+from destination import CommunityDestination, CandidateDestination
+from distribution import (SyncDistribution, GlobalTimePruning, LastSyncDistribution, DirectDistribution,
+                          FullSyncDistribution)
+from exception import ConversionNotFoundException, MetaNotFoundException
+from member import DummyMember, Member
+from message import (BatchConfiguration, Message, Packet, DropMessage, DelayMessageByProof,
+                     DelayMessageByMissingMessage, DropPacket, DelayPacket, DelayMessage)
+from payload import (AuthorizePayload, RevokePayload, UndoPayload, DestroyCommunityPayload, DynamicSettingsPayload,
+                     IdentityPayload, MissingIdentityPayload, IntroductionRequestPayload, IntroductionResponsePayload,
+                     PunctureRequestPayload, PuncturePayload, MissingMessagePayload, MissingSequencePayload,
+                     MissingProofPayload, SignatureRequestPayload, SignatureResponsePayload)
+from requestcache import RequestCache, SignatureRequestCache, IntroductionRequestCache
+from resolution import PublicResolution, LinearResolution, DynamicResolution
+from statistics import CommunityStatistics
+from taskmanager import TaskManager
+from timeline import Timeline
+from util import runtime_duration_warning, attach_runtime_statistics, deprecated, is_valid_address
 
 
 DOWNLOAD_MM_PK_INTERVAL = 15.0

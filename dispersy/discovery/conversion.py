@@ -1,8 +1,8 @@
-from struct import pack, unpack_from
 from socket import inet_ntoa, inet_aton
+from struct import pack, unpack_from
 
-from ..message import DropPacket
-from ..conversion import BinaryConversion
+from conversion import BinaryConversion
+from dispersy.message import DropPacket
 
 
 class DiscoveryConversion(BinaryConversion):

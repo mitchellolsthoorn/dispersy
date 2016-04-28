@@ -26,7 +26,6 @@ from time import time
 
 from dispersy.candidate import LoopbackCandidate
 from dispersy.crypto import NoVerifyCrypto, NoCrypto
-from dispersy.discovery.community import DiscoveryCommunity
 from dispersy.dispersy import Dispersy
 from dispersy.endpoint import StandaloneEndpoint
 from dispersy.exception import CommunityNotFoundException
@@ -38,12 +37,13 @@ from twisted.internet.task import LoopingCall
 from twisted.logger import globalLogPublisher
 from twisted.plugin import IPlugin
 from twisted.python import usage
-from twisted.python.log import msg, ILogObserver, PythonLoggingObserver, FileLogObserver
+from twisted.python.log import msg, ILogObserver, FileLogObserver
 from twisted.python.logfile import DailyLogFile
 from twisted.python.threadable import isInIOThread
 from zope.interface import implements
 
-from tool.clean_observers import clean_twisted_observers
+from dispersy.discovery.community import DiscoveryCommunity
+from dispersy.tool import clean_twisted_observers
 
 COMMUNITY_CLEANUP_INTERVAL = 180.0
 

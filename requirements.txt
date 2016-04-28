@@ -1,0 +1,11 @@
+netifaces
+nose
+setuptools
+zope.interface
+M2Crypto
+meliae
+msgpack_python
+sphinx
+sphinx_rtd_theme
+zope
+libnacl

@@ -1,14 +1,13 @@
+import logging
 from random import shuffle
 from threading import Lock
-import logging
 
 from twisted.internet import reactor
 from twisted.internet.abstract import isIPAddress
 from twisted.internet.defer import gatherResults, inlineCallbacks, returnValue
 from twisted.internet.task import LoopingCall
 
-from ..candidate import Candidate
-
+from dispersy.candidate import Candidate
 
 # Note that some the following DNS entries point to the same IP addresses.  For example, currently
 # both DISPERSY1.TRIBLER.ORG and DISPERSY1.ST.TUDELFT.NL point to 130.161.211.245.  Once these two

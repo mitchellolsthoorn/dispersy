@@ -37,28 +37,28 @@ supply.  Aside from the four policies, each meta-message also defines the commun
 of, the name it uses as an internal identifier, and the class that will contain the payload.
 """
 import logging
+import netifaces
 import os
 from collections import defaultdict, Iterable, OrderedDict
 from hashlib import sha1
 from itertools import groupby, count
 from pprint import pformat
-from socket import inet_aton, error as socket_error
+from socket import inet_aton
 from struct import unpack_from
 from time import time
 
-import netifaces
 from twisted.internet import reactor
 from twisted.internet.defer import maybeDeferred, gatherResults
 from twisted.internet.task import LoopingCall
 from twisted.python.failure import Failure
 from twisted.python.threadable import isInIOThread
 
+from dispersy.discovery import DiscoveryCommunity
 from .authentication import MemberAuthentication, DoubleMemberAuthentication
 from .candidate import LoopbackCandidate, WalkCandidate, Candidate
 from .community import Community
 from .crypto import DispersyCrypto, ECCrypto
 from .destination import CommunityDestination, CandidateDestination
-from .discovery.community import DiscoveryCommunity
 from .dispersydatabase import DispersyDatabase
 from .distribution import (SyncDistribution, FullSyncDistribution, LastSyncDistribution,
                            DirectDistribution)
@@ -70,7 +70,6 @@ from .message import (Message, DropMessage, DelayMessageBySequence,
 from .statistics import DispersyStatistics, _runtime_statistics
 from .taskmanager import TaskManager
 from .util import attach_runtime_statistics, init_instrumentation, blocking_call_on_reactor_thread, is_valid_address
-
 
 # Set up the instrumentation utilities
 init_instrumentation()

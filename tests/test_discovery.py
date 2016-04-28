@@ -1,8 +1,8 @@
-from .dispersytestclass import DispersyTestFunc
-from ..discovery.community import DiscoveryCommunity, BOOTSTRAP_FILE_ENVNAME
-from ..discovery.bootstrap import _DEFAULT_ADDRESSES
-import os
 import time
+
+from dispersy.discovery import DiscoveryCommunity
+from dispersy.discovery import _DEFAULT_ADDRESSES
+from .dispersytestclass import DispersyTestFunc
 
 
 class TestDiscovery(DispersyTestFunc):

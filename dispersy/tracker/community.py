@@ -1,6 +1,6 @@
-from ..community import Community, HardKilledCommunity
-from ..conversion import BinaryConversion
-from ..exception import ConversionNotFoundException
+from community import Community, HardKilledCommunity
+from conversion import BinaryConversion
+from exception import ConversionNotFoundException
 
 
 class TrackerHardKilledCommunity(HardKilledCommunity):

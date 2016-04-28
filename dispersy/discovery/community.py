@@ -5,24 +5,23 @@ from collections import OrderedDict
 from random import random, shuffle
 from time import time
 
+from candidate import CANDIDATE_WALK_LIFETIME, Candidate, WalkCandidate
+from destination import CandidateDestination
+from distribution import DirectDistribution
+from member import Member
+from message import DelayMessageByProof, DropMessage, Message
+from resolution import PublicResolution
 from twisted.internet import reactor
 from twisted.internet.task import LoopingCall
 
-from ..authentication import MemberAuthentication, NoAuthentication
-from ..candidate import CANDIDATE_WALK_LIFETIME, Candidate, WalkCandidate
-from ..community import Community
-from ..conversion import DefaultConversion
-from ..destination import CandidateDestination
-from ..distribution import DirectDistribution
-from ..member import Member
-from ..message import DelayMessageByProof, DropMessage, Message
-from ..requestcache import RandomNumberCache
-from ..resolution import PublicResolution
+from community import Community
+from conversion import DefaultConversion
+from dispersy.authentication import MemberAuthentication, NoAuthentication
+from dispersy.requestcache import RandomNumberCache
 from .bootstrap import Bootstrap
 from .conversion import DiscoveryConversion
 from .payload import (ExtendedIntroPayload, PingPayload, PongPayload, SimilarityRequestPayload,
                       SimilarityResponsePayload)
-
 
 DEBUG_VERBOSE = False
 

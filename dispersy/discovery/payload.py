@@ -1,4 +1,4 @@
-from ..payload import Payload, IntroductionRequestPayload
+from payload import Payload, IntroductionRequestPayload
 
 
 class SimilarityRequestPayload(Payload):

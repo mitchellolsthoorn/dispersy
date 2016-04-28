@@ -9,9 +9,8 @@ import signal
 from twisted.internet import reactor
 from twisted.python.log import addObserver
 
-from ..dispersy import Dispersy
-from ..endpoint import StandaloneEndpoint
-
+from dispersy import Dispersy
+from dispersy.endpoint import StandaloneEndpoint
 
 # use logger.conf if it exists
 if os.path.exists("logger.conf"):

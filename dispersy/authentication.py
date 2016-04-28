@@ -11,7 +11,7 @@ creator of this message.
 """
 
 from abc import ABCMeta, abstractproperty
-from .meta import MetaObject
+from meta import MetaObject
 
 
 class Authentication(MetaObject):
