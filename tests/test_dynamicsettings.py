@@ -1,4 +1,4 @@
-from ..resolution import PublicResolution, LinearResolution
+from dispersy.resolution import PublicResolution, LinearResolution
 from .dispersytestclass import DispersyTestFunc
 
 

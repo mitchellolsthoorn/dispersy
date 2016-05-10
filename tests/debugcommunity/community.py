@@ -1,11 +1,11 @@
-from ...authentication import DoubleMemberAuthentication, MemberAuthentication
-from ...candidate import Candidate
-from ...community import Community, HardKilledCommunity
-from ...conversion import DefaultConversion
-from ...destination import CommunityDestination
-from ...distribution import DirectDistribution, FullSyncDistribution, LastSyncDistribution, GlobalTimePruning
-from ...message import Message, DelayMessageByProof, BatchConfiguration
-from ...resolution import PublicResolution, LinearResolution, DynamicResolution
+from dispersy.authentication import DoubleMemberAuthentication, MemberAuthentication
+from dispersy.candidate import Candidate
+from dispersy.community import Community, HardKilledCommunity
+from dispersy.conversion import DefaultConversion
+from dispersy.destination import CommunityDestination
+from dispersy.distribution import DirectDistribution, FullSyncDistribution, LastSyncDistribution, GlobalTimePruning
+from dispersy.message import Message, BatchConfiguration
+from dispersy.resolution import PublicResolution, LinearResolution, DynamicResolution
 
 from .payload import TextPayload
 from .conversion import DebugCommunityConversion

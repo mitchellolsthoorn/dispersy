@@ -1,4 +1,4 @@
-from community import Community, HardKilledCommunity
+from dispersy.community import Community, HardKilledCommunity
 from conversion import BinaryConversion
 from exception import ConversionNotFoundException
 

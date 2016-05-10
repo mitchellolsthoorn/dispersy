@@ -8,10 +8,10 @@ from nose.twistedtools import reactor
 from twisted.internet.defer import inlineCallbacks
 from twisted.internet.task import deferLater
 
-from ..conversion import DefaultConversion
-from ..dispersy import Dispersy
-from ..endpoint import StandaloneEndpoint
-from ..util import blocking_call_on_reactor_thread
+from dispersy.conversion import DefaultConversion
+from dispersy.dispersy import Dispersy
+from dispersy.endpoint import StandaloneEndpoint
+from dispersy.util import blocking_call_on_reactor_thread
 from .debugcommunity.community import DebugCommunity
 from .debugcommunity.conversion import DebugCommunityConversion
 from .dispersytestclass import DispersyTestFunc

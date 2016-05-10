@@ -1,5 +1,5 @@
-from ..exception import CommunityNotFoundException
-from ..util import call_on_reactor_thread
+from dispersy.exception import CommunityNotFoundException
+from dispersy.util import call_on_reactor_thread
 from .debugcommunity.community import DebugCommunity
 from .dispersytestclass import DispersyTestFunc
 

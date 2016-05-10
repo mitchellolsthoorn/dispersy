@@ -1,7 +1,7 @@
 import time
 
-from dispersy.discovery import DiscoveryCommunity
-from dispersy.discovery import _DEFAULT_ADDRESSES
+from dispersy.discovery.community import DiscoveryCommunity
+from dispersy.discovery.bootstrap import _DEFAULT_ADDRESSES
 from .dispersytestclass import DispersyTestFunc
 
 

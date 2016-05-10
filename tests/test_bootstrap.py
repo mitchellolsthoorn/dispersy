@@ -1,6 +1,6 @@
 from collections import defaultdict
 from copy import copy
-from os import environ, getcwd, path
+from os import environ, path
 from socket import getfqdn
 from subprocess import Popen, PIPE, STDOUT
 from threading import Thread
@@ -12,11 +12,11 @@ from nose.twistedtools import reactor
 from twisted.internet.defer import Deferred, inlineCallbacks, returnValue
 from twisted.internet.task import deferLater
 
-from ..candidate import Candidate
-from ..dispersy import Dispersy
-from ..endpoint import StandaloneEndpoint
-from ..message import Message, DropMessage
-from ..util import blockingCallFromThread
+from dispersy.candidate import Candidate
+from dispersy.dispersy import Dispersy
+from dispersy.endpoint import StandaloneEndpoint
+from dispersy.message import Message, DropMessage
+from dispersy.util import blockingCallFromThread
 from .debugcommunity.community import DebugCommunity
 from .dispersytestclass import DispersyTestFunc
 

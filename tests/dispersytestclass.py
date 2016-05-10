@@ -14,10 +14,10 @@ else:
 
 from twisted.internet.defer import inlineCallbacks, returnValue
 
-from dispersy.discovery import PEERCACHE_FILENAME
-from ..dispersy import Dispersy
-from ..endpoint import ManualEnpoint
-from ..util import blockingCallFromThread
+from dispersy.discovery.community import PEERCACHE_FILENAME
+from dispersy.dispersy import Dispersy
+from dispersy.endpoint import ManualEnpoint
+from dispersy.util import blockingCallFromThread
 from .debugcommunity.community import DebugCommunity
 from .debugcommunity.node import DebugNode
 

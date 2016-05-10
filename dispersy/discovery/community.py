@@ -5,7 +5,7 @@ from collections import OrderedDict
 from random import random, shuffle
 from time import time
 
-from candidate import CANDIDATE_WALK_LIFETIME, Candidate, WalkCandidate
+from dispersy.candidate import CANDIDATE_WALK_LIFETIME, Candidate, WalkCandidate
 from destination import CandidateDestination
 from distribution import DirectDistribution
 from member import Member
@@ -14,7 +14,7 @@ from resolution import PublicResolution
 from twisted.internet import reactor
 from twisted.internet.task import LoopingCall
 
-from community import Community
+from dispersy.community import Community
 from conversion import DefaultConversion
 from dispersy.authentication import MemberAuthentication, NoAuthentication
 from dispersy.requestcache import RandomNumberCache

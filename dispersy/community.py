@@ -16,8 +16,7 @@ from random import random, Random, randint, shuffle, uniform
 from time import time
 
 from twisted.internet import reactor
-from twisted.internet.defer import inlineCallbacks
-from twisted.internet.task import LoopingCall, deferLater
+from twisted.internet.task import LoopingCall
 from twisted.python.threadable import isInIOThread
 
 from .authentication import NoAuthentication, MemberAuthentication, DoubleMemberAuthentication
